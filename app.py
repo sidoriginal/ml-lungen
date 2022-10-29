@@ -26,6 +26,6 @@ def predict():
     chest = request.form.get('chest')
     input_query = np.array([[Fe,Ma,age,smoke,yellow,anxiety,peer,chronic,fatigue,allergy,wheezing,alcohol,cough,breath,swallow,chest]])
     result = model.predict(input_query)[0]
-    return jsonify({'placement':str(result)})
+    return jsonify({'cancer':str(result)})
 if __name__ == '__main__':
     app.run(debug=True)
